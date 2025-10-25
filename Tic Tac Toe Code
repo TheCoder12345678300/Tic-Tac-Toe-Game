@@ -1,0 +1,64 @@
+#Tic-Tac-Toe Game
+#Not finished
+
+
+import pygame
+from sys import exit
+
+
+pygame.init()
+screen = pygame.display.set_mode((500, 500))
+pygame.display.set_caption("TIC-TAC-TOE GAME")
+clock = pygame.time.Clock()
+
+color_surface = pygame.Surface((500, 500))
+color_surface.fill('white')
+
+tictactoe_surface = pygame.image.load('Code/tic1.png')
+
+
+
+# THIS IS TO DISPLAY THE PYGAME WINDOW ON THE SCREEN
+
+while True:
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+
+   
+
+    screen.blit(color_surface, (0, 0))
+    screen.blit(tictactoe_surface,(500, 500))
+           
+    pygame.display.update()
+    clock.tick(60)
+
+# THIS IS TO let the player and the computer play the tictactoe game ON THE SCREEN
+
+board = ((0, 0, 0,)
+        ( 0, 0, 0,)  
+        ( 0, 0, 0,))
+
+# Player's turn
+
+if player_turn == True:
+    
+   if event.type == pygame.MOUSEBUTTONDOWN:
+        
+       mouse_x, mouse_y = pygame.mouse.get_pos()
+
+       row = mouse_y // 166
+       col = mouse_x // 166
+    
+      board[row][col] = 1
+   
+      player_turn = False
+
+else: 
+#Now it's the computer's turn to play
+
+
+
+
