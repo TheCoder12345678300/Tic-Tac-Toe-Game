@@ -1,0 +1,426 @@
+# Python Course
+#Not finished
+
+x = 22
+print(x)
+#Prints the value of x which is 22
+
+type(x)
+
+#Displays the type of variable x which is integer
+
+
+y= "Mint Chocolate Chip"
+print(y)
+#Prints the value of y which is "Mint Chocolate Chip"
+type(y)
+#Displays the type of variable y which is string
+
+y= "Chocolate Chip" 
+
+#Changes the value of y to "Chocolate Chip"
+
+y= "Mint Chocolate Chip"
+
+#Changes the value of y back to "Mint Chocolate Chip"
+
+print(y)
+
+#Prints the value of y which is "Mint Chocolate Chip"
+
+X, Y, Z = "Orange", "Banana", "Cherry"
+
+#Assigns the values "Orange", "Banana", and "Cherry" to the variables X, Y, and Z respectively
+
+print(X)
+print(Y)
+print(Z)
+
+#Prints the values of X, Y, and Z which are "Orange", "Banana", and "Cherry" respectively
+
+X = Y = Z = "Orange"
+
+#Assigns the value "Orange" to the variables X, Y, and Z respectively
+
+print(X)
+print(Y)
+print(Z)
+
+#Prints the values of X, Y, and Z which are all "Orange"
+
+ice_cream = ["Chocolate Chip", "Vannilla", "Strawberry"]
+
+#Creates a list named ice_cream containing three flavors: "Chocolate Chip", "Vannilla", and "Strawberry"
+
+X, Y, Z = ice_cream
+
+#Assigns the values from the ice_cream list to the variables X, Y, and Z respectively
+
+print(X)
+print(Y)
+print(Z)
+
+#Prints the values of X, Y, and Z which are "Chocolate Chip", "Vannilla", and "Strawberry" respectively
+#_______________________________________________________________________________
+
+# Good Variable Case Practices
+
+#Camel Case
+
+# Test Variable Case
+
+testVariableCase = "Vanilla Swirl"
+
+#Pascal Case
+
+#Test VariAble Case
+
+TestVariableCase = "Chocolate Fudge"
+
+#Snake Case
+
+#Test Variable Case 
+
+test_variable_case = "Strawberry Cheesecake"
+
+#Some more you can use for example
+
+testvar = "Mango Sorbet"
+test_var = "Pistachio"
+_test_var = "Butter Pecan"
+testVar = "Rocky Road"
+TestVar = "Mint Chocolate Chip"
+testVar2 = "Coffee"
+
+
+#_______________________________________________________________________________
+
+#Variables you can't use in Python
+
+#1.Having a number at the beginning of a variable name
+
+#2variable = "This will cause an error"
+
+#2.using a dash in the variable name
+
+#test-Var2 = "This will also cause an error"
+
+#Can use any special character except for underscore(_)
+#___________________________________________________________________________
+
+
+x = "Ice Cream is my Favorite Dessert" + "."
+print(x)
+
+#Prints the concatenated string "Ice Cream is my Favorite Dessert."
+
+#But you can't concatenate string and integer together directly SUCH AS:
+
+x = "I have " + 3 + " scoops of ice cream."
+print(x)
+
+#This will cause an error because you can't concatenate string and integer directly
+
+#bUT YOU CAN DO INTGER WITH INTERGER SUCH as:
+
+y = 3 + 2
+print(y)
+
+#Prints the value of y which is 5
+
+x = 'Ice Cream'
+y= ' is' 
+z= ' Delicious'
+print(x + y + z)
+
+#Prints the concatenated string "Ice Cream is Delicious"
+
+#You can use the same format for numbers like this:
+
+x = 1
+y = 2
+z = 3
+print(x + y + z)
+
+#Prints the value of x + y + z which is 6
+
+#But you can combine a sting and a number using a comma like this:
+
+x = 'Ice Cream'
+y = 2
+
+print(x, y)
+
+#Prints the string and the number with a space in between: Ice Cream 2
+
+#_______________________________________________________________________________
+
+#DATA TYPES IN PYTHON
+
+#Numeric data types
+
+#Integer
+# A positive or negative whole number 
+
+type(10)
+#interpreted as int
+
+type(-10)
+
+#interpreted as int
+
+type(-10 + 5)
+
+#interpreted as int
+
+
+#Float
+
+# A positive or negative decimal number
+
+type(10.5)
+
+#interpreted as float
+
+type(-10.5)
+
+#interpreted as float
+
+type(-10.5 + 5.5)
+
+# also interpreted as float
+
+
+#Complex Numbers
+
+# A number with a real and imaginary part TO IT SUCH AS :
+
+type(3 + 5j)
+
+#interpreted as complex number
+
+type(-3 - 5j)
+
+#interpreted as complex number
+
+# J is the ONLY IMAGINARY LETTER USED IN PYTHON
+
+#---------------------------------------------------------------------------------------------
+
+# BOOLEAN DATA TYPE
+
+# It is a stament that can only be TRUE or FALSE
+
+type(True)
+
+#interpreted as bool
+
+type(False)
+
+#also interpreted as bool
+
+# can also use comparison operators to get boolean values SUCH AS:
+
+type(10 > 5)
+
+#interpreted as bool with value TRUE
+
+type(10 < 5)
+
+#interpreted as bool with value FALSE
+
+#-------------------------------------------------------------------------------
+
+#Sequence Data Types
+
+#String
+
+# They are arrays of bytes representing unicode characters
+
+# They are also enclosed in single quotes, double quotes,and triple quotes:
+
+'This is a string enclosed in single quotes'
+
+"This is a string enclosed in double quotes"
+
+"""This is a string enclosed in triple quotes"""
+
+# you can also use multiline strings using triple quotes like this:
+
+"""This is a string
+enclosed in triple quotes
+that spans multiple lines"""
+
+# We can also print this multiline string like this:
+
+multiline = """This is a string
+enclosed in triple quotes
+that spans multiple lines"""
+
+print(multiline)
+
+#Prints the multiline string as it is
+
+#If you have the same type of quotes outside and inside of the string , you will get and error message. 
+#For example:
+
+#'This is a string with 'single quotes' inside'
+
+#"This is a string with "double quotes" inside"
+
+#To fix this, you can use different types of quotes outside and inside the string SUCH AS:  
+
+'This is a string with "double quotes" inside and single quotes outside'
+
+"This is a string with 'single quotes' inside and double quotes outside"
+
+
+# You can also index strings 
+# Inkexing means to accesss withing the string  and the index starts at 0.
+#For example:
+
+a = "Hello, World!"
+
+print(a[0])  #Prints H
+print(a[7])  #Prints W  
+
+#We can also use negative indexing to access characters from the end of the string SUCH AS:
+
+print(a[-1])  #Prints !
+print(a[-5])  #Prints o
+
+# You can also do mulitple indexing to get a substring from the string SUCH AS:
+
+print(a[0:5])  #Prints Hello
+print(a[7:12])  #Prints World
+
+# we can also multiply strings to repeat them SUCH AS:
+
+a*3 = "Hello, World!Hello, World!Hello, World!"
+print(a*3)
+
+#Prints Hello, World!Hello, World!Hello, World!
+
+# we can also add them together to concatenate them SUCH AS:
+
+a + a = "Hello, World!Hello, World!"
+print(a + a)
+
+#Prints Hello, World!Hello, World!
+
+#-----------------------------------------------------------------------------------------------
+
+#LISTS 
+
+#They are used to store multiple items in a single variable
+
+#for example:
+
+[1 ,2 ,3 ,4 5, 6 ,7 ,8 ,9 ,10]
+
+#This is a list containing 10 integers from 1 to 10
+
+
+#You can also have strings in a list SUCH AS:
+
+["Chocolate", "Vannilla", "Strawberry", "Mint Chocolate Chip"]
+
+# you can put just about anything in a list with commas:
+ 
+ [1, "Chocolate", 3.5, True, [5, 6, 7]]
+
+#This is a list containing an integer, a string, a float, a boolean, and another list
+
+# You can set a list to a variable SUCH AS:
+
+ice_cream_flavors = ["Chocolate", "Vannilla", "Strawberry", "Mint Chocolate Chip"]
+
+# Then we can add  items from the list using methods SUCH AS . append :
+
+ice_cream_flavors.append("Cookie Dough")
+
+#This adds "Cookie Dough" to the end of the ice_cream_flavors list
+
+# you can also replace items in the list by specifying the index number and telling it what to replace it with SUCH AS:
+
+ice_cream_flavors[1] = "Butter Pecan"
+
+#This replaces "Vannilla" with "Butter Pecan" in the ice_cream_flavors list
+
+# You can also replace some things in a  list inside of a list like this :
+
+nested_list = [1, 2, [3, 4, 5], 6]
+nested_list[2][1] = "67"
+#This replaces 4 with "67" in the nested_list
+
+#------------------------------------------------------------------------------------------------------------------------------------
+
+# Tuples 
+
+# A tuple is a list but it is immutable meaning you cannot change it once its been made.
+# for example:
+
+tuple_scoops = (1, 2, 3, 2, 1)
+type (tuple_scoops)
+
+#interpreted as tuple
+
+# You cannot change the values in a tuple SUCH AS:
+
+#tuple_scoops.append(4)
+
+#This will cause an error because you cannot change a tuple once its been made
+
+#-------------------------------------------------------------------------------------------------------------------------------------------
+
+#Sets 
+# A set is a collection which is unordered , unchangeable , and unindexed.
+#THEY DO NOT ALLOW DUPLICATE VALUES.
+# They are written with curly brackets SUCH AS:
+
+
+set_flavors = {"Chocolate", "Vannilla", "Strawberry"}
+
+type(set_flavors)
+print(set_flavors)
+
+#interpreted as set
+#Prints the set_flavors set AND DOESNT ALLOW DUPLICATES
+
+#ANOTHER EXAMPLE:
+
+daily_temperatures = {72, 75, 78, 72, 80, 75}
+type(daily_temperatures)
+print(daily_temperatures)
+#interpreted as set
+#Prints the daily_temperatures set which is 80, 72 , 78 , and 75 AND DOESNT ALLOW DUPLICATES
+
+# You can also compare sets and find what is unique that makes one more different than the other like this:
+
+daily_weather = {"Sunny", "Cloudy", "Rainy"}
+weekly_weather = {"Windy", "Stormy", "Sunny"}
+combined_weather = {daily_weather / weekly_weather}
+print(combined_weather)
+ 
+ #This finds the unique weather conditions in daily_weather that are not in weekly_weather
+
+# Also you can find the similarities between two sets like this:
+
+common_weather = {daily_weather & weekly_weather}
+print(common_weather)
+
+#This finds the common weather conditions between daily_weather and weekly_weather
+
+# also shows the difference between two sets like this:
+
+different_weather = {daily_weather - weekly_weather}
+print(different_weather)
+
+#This finds the weather conditions that are in daily_weather but not in weekly_weather
+
+# you cand flip it around like this:
+
+different_weather2 = {weekly_weather - daily_weather}
+print(different_weather2)
+
+#This finds the weather conditions that are in weekly_weather but not in daily_weather
