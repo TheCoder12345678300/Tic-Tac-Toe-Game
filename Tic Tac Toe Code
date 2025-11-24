@@ -3,8 +3,13 @@
 
 
 import pygame
+import random 
 from sys import exit
 
+board = [[0, 0, 0],
+         [0, 0, 0],
+         [0, 0, 0]]
+player_turn = True
 
 pygame.init()
 screen = pygame.display.set_mode((500, 500))
@@ -12,53 +17,52 @@ pygame.display.set_caption("TIC-TAC-TOE GAME")
 clock = pygame.time.Clock()
 
 color_surface = pygame.Surface((500, 500))
+
 color_surface.fill('white')
 
 tictactoe_surface = pygame.image.load('Code/tic1.png')
 
+o_image = pygame.image.load('Code/circle image.png')
 
-
-# THIS IS TO DISPLAY THE PYGAME WINDOW ON THE SCREEN
+x_image = pygame.image.load('Code/x image.png')
 
 while True:
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
+        
+        if player_turn == True:
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_x, mouse_y = pygame.mouse.get_pos()
+                row = mouse_y // 166
+                col = mouse_x // 166
+                board[row][col] = 1
+                player_turn = False
+        
+        else:
+            
+            row = random.randint(0, 2)
+            col = random.randint(0, 2)
 
-   
+            
+            while board[row][col] != 0:
+                  row = random.randint(0, 2)
+                  col = random.randint(0, 2)
+
+            board[row][col] = 2
+            player_turn = True
 
     screen.blit(color_surface, (0, 0))
-    screen.blit(tictactoe_surface,(500, 500))
-           
+    screen.blit(tictactoe_surface, (0,0))
+    
+    
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] == 1:
+                screen.blit(o_image, (col * 166, row * 166))    
+            elif board[row][col] == 2:
+                screen.blit(x_image, (col * 166, row * 166))
+    
     pygame.display.update()
     clock.tick(60)
-
-# THIS IS TO let the player and the computer play the tictactoe game ON THE SCREEN
-
-board = ((0, 0, 0,)
-        ( 0, 0, 0,)  
-        ( 0, 0, 0,))
-
-# Player's turn
-
-if player_turn == True:
-    
-   if event.type == pygame.MOUSEBUTTONDOWN:
-        
-       mouse_x, mouse_y = pygame.mouse.get_pos()
-
-       row = mouse_y // 166
-       col = mouse_x // 166
-    
-      board[row][col] = 1
-   
-      player_turn = False
-
-else: 
-#Now it's the computer's turn to play
-
-
-
-
