@@ -1,5 +1,5 @@
 # Python Course
-#Not finished
+# not finsihed
 
 x = 22
 print(x)
@@ -424,3 +424,503 @@ different_weather2 = {weekly_weather - daily_weather}
 print(different_weather2)
 
 #This finds the weather conditions that are in weekly_weather but not in daily_weather
+
+
+print(weekly_weather ^ daily_weather)
+
+#This finds the weather conditions that are in either weekly_weather or daily_weather but not in both.
+
+#--------------------------------------------------------------------------------------------------------------------------------------------
+
+#DICTIONARIES
+
+# In a data type we always have something called a Key/Value Pair
+#This means that when we use a dictionary its not a list and instead their is a key that the value is attributed to. 
+
+# for example:
+
+dict_cream = {'name': 'Alex Freberg','weekly intake': 5, 'favorite ice cream': 'Mint Chocolate Chip', 'Vanilla'}
+
+type(dict_cream)
+
+#interpreted as dictionary
+
+print(dict_cream)
+
+#Prints the dict_cream dictionary with its key/value pairs
+
+dict_cream.values()
+
+#This displays all the values in the dict_cream dictionary
+
+dict_cream.keys()
+
+#This displays all the keys in the dict_cream dictionary
+
+dict_cream.items()
+
+#This displays all the key/value pairs in the dict_cream dictionary
+
+dict_cream = ['name']
+
+#This accesses the value associated with the key 'name' in the dict_cream dictionary
+
+dict_cream = ['name'] = 'John Doe'
+
+#This changes the value associated with the key 'name' to 'John Doe' in the dict_cream dictionary
+
+dict_cream.update = {'name': 'Alex Freberg','weekly intake': 5, 'weight': '300 lbs'}
+
+
+print(dict_cream)
+
+#Prints the updated dict_cream dictionary with the new key/value pair 'weight': '300 lbs'
+#This adds a new key/value pair 'weight': '300 lbs' to the dict_
+
+
+
+# But if we want to delete something from the dictionary we can do it like this :
+
+del dict_cream['weight']
+
+print(dict_cream)
+
+#Prints the dict_cream dictionary without the 'weight' key/value pair
+
+
+#\#______________________________________________________________________________________
+
+
+#Comparison Operators in Python
+
+# They are used to perfrom operations on variables and values to compare them.
+# They return boolean values TRUE or FALSE based on the comparison.
+
+#______________________________________________________________________
+
+# Equal to (==)
+
+10 == 10 
+
+#This checks if 10 is equal to 10 and returns TRUE
+
+5 == 10
+
+#This checks if 5 is equal to 10 and returns FALSE
+
+#______________________________________________________________________
+
+# Not Equal to (!=)
+
+10 != 5
+
+#This checks if 10 is not equal to 5 and returns TRUE
+
+10 != 10
+
+#This checks if 10 is not equal to 10 and returns FALSE
+
+#_______________________________________________________________________
+
+# You can also compare strings like this:
+
+
+"Chocolate" == "Chocolate"
+
+#This checks if "Chocolate" is equal to "Chocolate" and returns TRUE
+
+"Chocolate" != "Vanilla"
+
+#This checks if "Chocolate" is not equal to "Vanilla" and returns TRUE
+
+"Chocolate" == "Vanilla"
+
+#This checks if "Chocolate" is equal to "Vanilla" and returns FALSE
+
+#_______________________________________________________________________
+
+# We can do the same with variables SUCH AS:
+
+x = 10
+
+y = 5
+
+x == y
+
+#This checks if the value of x is equal to the value of y and returns FALSE
+
+x != y
+
+#This checks if the value of x is not equal to the value of y and returns TRUE
+
+#_____________________________________________________________________________________  
+
+#Less than (<)
+
+10 < 20
+
+#This checks if 10 is less than 20 and returns TRUE
+
+# If we do less than or equal to (<=) it makes it true like this :
+
+10 <= 10
+
+#This checks if 10 is less than or equal to 10 and returns TRUE
+
+#Greater than (>)
+
+20 > 10
+#This checks if 20 is greater than 10 and returns TRUE
+
+#  we  can also do greater than or equal to (>=)  like this :
+ 
+ 20 >= 10 
+
+#This checks if 20 is greater than or equal to 10 and returns TRUE
+
+#_____________________________________________________________________________________
+
+#Logical Operators in Python
+
+# And Operator
+# It returns TRUE if both statements are true like this:
+
+10 > 5 and 20 > 15
+
+#This checks if both 10 is greater than 5 and 20 is greater than 15 and returns TRUE
+
+
+#Or Operator
+# It returns TRUE if one of the statements is true
+
+10 > 5 or 20 < 15
+
+#This checks if either 10 is greater than 5 or 20 is less than 15 and returns TRUE
+
+# we can use strings with it too like this:
+
+('Vanilla' < 'Chocolate') and ('Strawberry' > 'Banana')
+
+#This checks if both 'Vanilla' is less than 'Chocolate' and 'Strawberry' is greater than 'Banana' and returns TRUE since it depends on the first letter of the word and what letter of the alphabet it is in order to find if its greater or not.
+
+ ('Vanilla' < 'Chocolate') or ('Strawberry' < 'Banana')
+
+#This checks if either 'Vanilla' is less than 'Chocolate' or 'Strawberry' is less than 'Banana' and returns TRUE since the first statement is true.
+
+#Not Operator
+# It reverses the result , returns FALSE if the result is true
+
+not(10 > 5)
+
+#This checks if 10 is greater than 5 and returns FALSE because the not operator reverses the result
+
+#-------------------------------------------------------------------------------------
+
+# Membership Operators in Python
+
+#in Operator
+# It returns TRUE if a sequence with the specified value is present in the object
+ice_cream = "I love Chocolate Chip ice cream."
+
+"Chocolate Chip" in ice_cream
+
+#This checks if "Chocolate Chip" is present in the ice_cream string and returns TRUE
+# can also use it with lists SUCH AS:
+
+scoops = [1, 2, 3, 4, 5]
+
+2 in scoops 
+
+#This checks if 2 is present in the scoops list and returns TRUE
+
+
+
+# not in Operator
+# It returns TRUE if a sequence with the specified value is not present in the object
+
+scoops = [1, 2, 3, 4, 5]
+
+6 not in scoops 
+
+#This checks if 6 is not present in the scoops list and returns TRUE
+# We can also use it with variables SUCH AS:
+
+
+scoops = [1, 2, 3, 4, 5]
+wanted_scoop = 6
+
+wanted_scoop not in scoops 
+
+#This checks if the value of wanted_scoop is not present in the scoops list and returns TRUE
+
+#-------------------------------------------------------------------------------------
+
+
+#If - Elif - Else Statements in Python
+
+#if statment 
+
+if 25 > 10 :
+ print("It worked")
+
+#It says if 25 is greater than 10 than print 'it worked'.
+
+#Else Statment
+
+if 25 > 10 :
+ print("It worked")
+else:
+ print('It did not work ...')
+
+ #It shows that if 25 is less than 10 print 'it worked' but otherwise print 'it didnt work'.
+
+ # but if the if statment was true than it wouldnt run whats in the else statment and only in the if statment.
+
+ #Elif Statments
+
+
+if 25 > 10 :
+ print("It worked")
+ elif 25 > 10 :
+  print('elif worked')
+else:
+ print('It did not work ...')
+
+#This shows that if the if statment didnt work, then it will go to the elif statment, and if ythe elif statment doesnt work , than it goes to else statment.
+# You can also have multiple elif statments like this:
+
+
+if 25 < 10 :
+  print("It worked")
+ elif 25 < 10 :
+  print('elif worked')
+ elif 25 < 15 :
+  print('elif 2 worked')
+ elif 25 < 20 :
+  print('elif 3 worked')
+ elif 25 < 30 :
+  print('elif 4 worked')
+ else:
+  print('It did not work ...')
+
+# also it only printed whats in the 4th elif statment since its the first one thats true.
+# we can also use logical operators for the iff statments as well like this:
+
+if 25 < 10 or 1 < 3:
+ print("It worked")
+
+ # We can also do if else and elif statments just on one line like this:
+ 
+ print("It worked")if 10 < 30 else print('It did not work ...')
+
+ 
+# We can also do nested if statments like this: 
+
+if 25 < 10 or 1 < 3:
+    print("It worked")
+    if 10 > 5 :
+     print('This nested if statment worked')
+    
+# This puts a if statment inside of an if statment
+
+#________________________________________________________________________________________________________
+
+
+# For Loops in Python:
+
+# For loops are basically something that iterates over each part of a list or tuple or string and will see if its the last part of it and keep on looking until it finds it.
+
+#For example 
+
+integers = [1,2,3,4,5]
+
+for number in integers :
+ print(number)
+
+ # Prints out the numbers 1, 2 ,3 4, and 5 in order as it iterates thorough the list.
+
+ # You can also apply this to strings aswell like this:
+
+for number in integers :
+ print('yep!')
+
+# This prints yep! 5 times and the numbers in the list are like a counter.
+
+# it also doesnt matter what the variable name is and what is printed inside of the code.
+
+#you can also apply addition to for loops as well like this :
+
+for number in integers :
+ print(number + number)
+
+ # This basically doubles every single part of the list so it become 2 , 4 ,6, 8 , and 10.
+
+
+ # You can also do it with dictionaries like this : 
+
+ ice_cream_dict = {'weekly intake': 5 , 'favorite ice creams': ['Mint Chocalate Chip', 'Chocolate']}
+
+for cream in ice_cream_dict.values():
+    print(cream )
+
+    # This does only the values but does show the keys 
+    # But you can show the keys too like this:
+
+for cream in ice_cream_dict.items():
+    print(cream)
+
+# this shows both the keys and the values in the dictionary 
+# But if you only want to show the keys you can do this instead:
+
+
+for cream in ice_cream_dict.key():
+    print(cream)
+
+# But to neatly print the key and its corresponding value , you can do this instead:
+
+for key, value in ice_cream_dict.items():
+  print(key, '->', value)
+
+  # prints the key with an arrow to its corresponding value in the dictionary.
+
+#---------------------------------------------------------------------------------------------------------
+
+# Nested For Loops in Python
+
+# This is a for loop that is inside of a for loop like this:
+
+flavors = ['Vanilla','Chocolate', ' Cookie Dough']
+toppings = ['hot fudge', 'Oreos', 'Marshmellows']
+
+for one in flavors:
+    for two in toppings : 
+        print(one,'topped with',two)
+
+  # This iterates the second for loop with one thing in the first loop and then it iterates the first for loop.
+  # This is basically how for loops work.
+
+  #_________________________________________________________________________________________________________________________-
+   
+   # While Loops in Python
+      
+      # It is used to iterate over a block of code as long as the test condition is true.
+      # The difference between a for loop and a while one is that a for loop iterates regardless of if its true or not but a while loop iterates only when its true.
+
+# For Example :
+
+number = 0
+
+while number < 5 : 
+   print(number)
+   number = number + 1
+
+
+# Prints the numbers 1 2 3 and 4 because it only prints numbers starting from 0 and adding by one that are less than 5 and if one number broke the rule , then the loop stops.
+
+
+# Break Statment 
+
+
+number = 0
+
+while number < 5 : 
+   print(number)
+   if number == 3 :
+     break
+   number = number + 1
+
+# This was the same while loop as the last one but this time there is a break statment which is if the number was 3 , than the while loop would stop.
+
+number = 0
+
+while number < 5 : 
+   print(number)
+   if number ==  6:
+     break
+   number = number + 1
+else:
+  print('No longer < 5')
+
+# This basically iterates over the while loop and when the if statment fails then it goes to the else statment and does whatever is inside there and if the while loop doesnt work, then the else statment will not work.
+
+# Continue Statment:
+#If the continue statment is triggered, it rejects all remaining statmentys in the current iteration of the loop and the we'll go to the next iteration. 
+
+number = 0
+
+while number < 5 : 
+   print(number)
+   if number ==  3:
+     continue
+   number = number + 1
+else:
+  print('No longer < 5')
+
+#This will infinity print the number 3 since after it goes to the if statment, the continue statment starts the while loop all over again.
+# If i switch this up then : 
+
+number = 0
+
+while number < 5 : 
+  number = number + 1
+   print(number)
+   if number ==  3:
+     continue
+   print(number)
+else:
+  print('No longer < 5')
+
+# This will skip printing the number 3 in the if statment because it is after the conitnue statment that restarts it back to the beginning.
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#FUNCTIONS:
+
+# A function is a block of code which is only run when you call it 
+
+def function():
+  print( "My first function")
+
+function()
+
+# This will call the function and it will print out my first function .
+
+def first_func():
+  print("We did it")
+
+first_func():
+
+# This prints we did it when you call the function and it does whats inside of it.
+
+# Arguments
+
+def number_squared(number):
+  print(number**2)
+
+  number_squared(5)
+   
+# number in this code is an argument that you can input to be run in the body of code such as 5 in this example.
+
+def number_squared_cust(number,power):
+  print(number**power)
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
